@@ -1,17 +1,15 @@
-//your JS code here. If required.
 document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the default form submission
+    event.preventDefault(); // Prevents the default form submission behavior
 
-    // Getting form values
-    const name = document.getElementById('name').value;
-    const Lastname = document.getElementById('Lastname').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
+    // Retrieve form values
+    const firstName = this.elements['First Name'].value;
+    const lastName = this.elements['Last Name'].value;
+    const phoneNumber = this.elements['Phone Number'].value;
+    const email = this.elements['Email ID'].value;
 
-    // Creating alert message with form info
-    const alertMessage = `Name: ${name}\n Last Name:${Lastname}\n Phone: ${phone} \nEmail: ${email}`;
+    // Create the message with proper formatting
+    const message = `First Name: ${firstName}\nLast Name: ${lastName}\nPhone Number: ${phoneNumber}\nEmail ID: ${email}`;
 
-    // Displaying form info in an alert
-    alert(alertMessage);
+    // Display form information in an alert
+    alert(message);
 });
-
